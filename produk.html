@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NGEKUE — Produk</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-wrap">
+      <a class="logo-nav" href="index.html" aria-label="NGEKUE Home" style="text-decoration:none;color:inherit">
+        <div class="logo-icon" aria-hidden="true">
+          <img class="logo-img" src="assets/logo.png" alt="" onerror="this.style.display='none'">
+          <span class="logo-letter">N</span>
+        </div>
+        NGEKUE
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="produk.html">Produk</a>
+        <a href="keunggulan.html">Keunggulan</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="kontak.html">Kontak</a>
+        <div class="cart-wrap">
+          <button class="cart-btn" id="cartBtn" type="button" aria-label="Keranjang">
+            <span class="cart-ico" aria-hidden="true">🛒</span><span class="cart-badge" id="cartBadge">0</span>
+          </button>
+          <div class="mini-cart" id="miniCart" aria-hidden="true"></div>
+        </div>
+        <a href="order.html" class="btn-primary">Pesan Sekarang</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="section" id="products">
+      <div class="section-header">
+        <h2 class="section-title">Menu Kue Lebaran Kami</h2>
+        <p class="section-subtitle">
+          Ada 13 varian pilihan. Semua dibuat homemade dengan bahan premium, dan layout sudah dibuat simetris &amp; rapih.
+        </p>
+      </div>
+
+      <div class="products-grid" aria-label="Daftar produk">
+        <div class="product-item" data-key="nastar">
+          <div class="product-item-img">🍪</div>
+          <div class="product-item-content">
+            <h3>Nastar Premium</h3>
+            <p class="product-desc">Isian nanas asli, lembut &amp; lumer di mulut (500g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 85.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="kastengel">
+          <div class="product-item-img">🧀</div>
+          <div class="product-item-content">
+            <h3>Kastengel Keju</h3>
+            <p class="product-desc">Gurih keju edam &amp; gouda, wangi butter premium (500g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 90.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="putri">
+          <div class="product-item-img">❄️</div>
+          <div class="product-item-content">
+            <h3>Putri Salju</h3>
+            <p class="product-desc">Buttery, lumer, bersalut gula halus lembut (500g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 80.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="lidah">
+          <div class="product-item-img">🍪</div>
+          <div class="product-item-content">
+            <h3>Lidah Kucing</h3>
+            <p class="product-desc">Renyah tipis, wangi vanila-butter, favorit semua umur (450g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 75.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="kacang">
+          <div class="product-item-img">🥜</div>
+          <div class="product-item-content">
+            <h3>Kue Kacang</h3>
+            <p class="product-desc">Classic! Gurih kacang, manisnya pas, bikin nostalgia (500g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 70.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="sagu">
+          <div class="product-item-img">🧈</div>
+          <div class="product-item-content">
+            <h3>Sagu Keju</h3>
+            <p class="product-desc">Ringan, wangi keju, tekstur renyah halus (500g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 78.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="semprit">
+          <div class="product-item-img">🌼</div>
+          <div class="product-item-content">
+            <h3>Semprit Butter</h3>
+            <p class="product-desc">Wangi butter kuat, manis pas, bentuk cantik (500g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 76.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="coklat">
+          <div class="product-item-img">🍫</div>
+          <div class="product-item-content">
+            <h3>Choco Cookies</h3>
+            <p class="product-desc">Choco chips melimpah, renyah, manis legit (500g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 79.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="almond">
+          <div class="product-item-img">🌰</div>
+          <div class="product-item-content">
+            <h3>Almond Cookies</h3>
+            <p class="product-desc">Premium topping almond panggang, renyah (500g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 88.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="snowball">
+          <div class="product-item-img">⛄</div>
+          <div class="product-item-content">
+            <h3>Snowball</h3>
+            <p class="product-desc">Bola cookies mini, bersalut gula halus, lumer (500g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 82.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="palm">
+          <div class="product-item-img">🧀</div>
+          <div class="product-item-content">
+            <h3>Palm Cheese</h3>
+            <p class="product-desc">Gurih keju + manis palm sugar, unik &amp; nagih (500g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 86.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="brownies">
+          <div class="product-item-img">🍫</div>
+          <div class="product-item-content">
+            <h3>Brownies Kering</h3>
+            <p class="product-desc">Coklat pekat, renyah, tidak mudah remuk (450g)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 84.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item" data-key="hampers">
+          <div class="product-item-img">🎁</div>
+          <div class="product-item-content">
+            <h3>Hampers Lebaran</h3>
+            <p class="product-desc">Paket mix varian + kartu ucapan + box premium (mix)</p>
+            <div class="product-footer">
+              <div class="product-price">Rp 180.000</div>
+              <div class="product-actions">
+                <button class="btn-small" type="button" data-action="detail">Detail</button>
+                <button class="btn-small btn-add" type="button" data-action="add">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-buttons" style="justify-content:center;margin-top:32px">
+        <a class="btn-large btn-primary" href="order.html" style="text-decoration:none">🧾 Pesan via Form</a>
+        <a class="btn-large btn-secondary" href="kontak.html" style="text-decoration:none">💬 Tanya Admin</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2 class="brand-title">
+            <span class="logo-icon" aria-hidden="true">
+              <img class="logo-img" src="assets/logo.png" alt="" onerror="this.style.display='none'">
+              <span class="logo-letter">N</span>
+            </span>
+            <span class="brand-name">NGEKUE</span>
+          </h2>
+          <p>Kue lebaran premium homemade dengan bahan pilihan. Cocok untuk hampers &amp; keluarga.</p>
+          <div class="social-links">
+            <a class="social-btn" href="#" data-social="ig" title="Instagram" aria-label="Instagram">📸</a>
+            <a class="social-btn" href="#" data-social="wa" title="WhatsApp" aria-label="WhatsApp">💬</a>
+            <a class="social-btn" href="#" data-social="tiktok" title="TikTok" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="keunggulan.html">Keunggulan</a></li>
+            <li><a href="testimoni.html">Testimoni</a></li>
+            <li><a href="order.html">Pesan</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Order</h4>
+          <ul class="footer-links">
+            <li><a href="order.html">Order via Form</a></li>
+            <li><a href="kontak.html">WhatsApp Admin</a></li>
+            <li><a href="mailto:cs@ngekue.id">cs@ngekue.id</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Catatan</h4>
+          <ul class="footer-links">
+            <li><a href="order.html">Minimal H-2 pengiriman</a></li>
+            <li><a href="order.html">Stok terbatas saat peak</a></li>
+            <li><a href="order.html">Konfirmasi admin</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> NGEKUE — All rights reserved.</span>
+        <span style="color:var(--muted)">12 varian • premium homemade</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Detail produk">
+      <button class="modal-close" type="button" onclick="closeModal()" aria-label="Tutup">✕</button>
+      <h3 id="modalTitle">Detail Produk</h3>
+      <p id="modalDesc">Deskripsi produk.</p>
+
+      <div class="modal-product">
+        <div class="modal-thumb" id="modalEmoji" aria-hidden="true">🍪</div>
+        <div class="modal-meta">
+          <h4 id="modalName">—</h4>
+          <ul class="modal-spec" id="modalSpec"></ul>
+          <p id="modalDetail" class="modal-detail">—</p>
+          <div class="price" id="modalPrice">—</div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-primary" type="button" onclick="chooseProduct()" aria-label="Tambah ke keranjang">Tambah ke Keranjang</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

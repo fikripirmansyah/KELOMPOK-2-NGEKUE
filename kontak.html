@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NGEKUE — Kontak</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-wrap">
+      <a class="logo-nav" href="index.html" aria-label="NGEKUE Home" style="text-decoration:none;color:inherit">
+        <div class="logo-icon" aria-hidden="true">
+          <img class="logo-img" src="assets/logo.png" alt="" onerror="this.style.display='none'">
+          <span class="logo-letter">N</span>
+        </div>
+        NGEKUE
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="produk.html">Produk</a>
+        <a href="keunggulan.html">Keunggulan</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="kontak.html">Kontak</a>
+        <div class="cart-wrap">
+          <button class="cart-btn" id="cartBtn" type="button" aria-label="Keranjang">
+            <span class="cart-ico" aria-hidden="true">🛒</span><span class="cart-badge" id="cartBadge">0</span>
+          </button>
+          <div class="mini-cart" id="miniCart" aria-hidden="true"></div>
+        </div>
+        <a href="order.html" class="btn-primary">Pesan Sekarang</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="contact-wrap">
+      <div class="section-header" style="margin-bottom:28px">
+        <h2 class="section-title" style="margin-bottom:10px">Riset &amp; Kirim Pesan</h2>
+        <p class="section-subtitle" style="font-size:16px">
+          Cek info pengiriman &amp; jam operasional, lalu kirim pesan ke admin via WhatsApp.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <section class="card" aria-label="Riset">
+          <h3>🔎 Riset Pengiriman</h3>
+          <p>
+            Agar pesanan aman sampai tujuan, kami sarankan pilih metode yang sesuai lokasi dan waktu.
+            Berikut panduan cepat (admin tetap konfirmasi ongkir final).
+          </p>
+
+          <div class="mini-grid">
+            <div class="pill">
+              <span>🚚</span>
+              <div>
+                <strong>Kurir Instan</strong>
+                <div>Same day, paling aman untuk area dekat.</div>
+              </div>
+            </div>
+            <div class="pill">
+              <span>📦</span>
+              <div>
+                <strong>Kurir Reguler</strong>
+                <div>1–2 hari (tergantung area), hemat ongkir.</div>
+              </div>
+            </div>
+            <div class="pill">
+              <span>🏪</span>
+              <div>
+                <strong>Pickup</strong>
+                <div>Ambil langsung, cocok jika dekat lokasi.</div>
+              </div>
+            </div>
+            <div class="pill">
+              <span>⏰</span>
+              <div>
+                <strong>Minimal H-2</strong>
+                <div>Peak season cepat habis, amankan slot lebih awal.</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;color:var(--muted);font-size:14px;line-height:1.7">
+            <strong style="color:var(--text)">Jam admin:</strong> 09.00–21.00 WIB<br>
+            <strong style="color:var(--text)">Email:</strong> cs@ngekue.id<br>
+            <strong style="color:var(--text)">Catatan:</strong> Stok terbatas saat peak, mohon konfirmasi dulu.
+          </div>
+        </section>
+
+        <section class="card" aria-label="Kirim pesan">
+          <h3>💬 Kirim Pesan ke Admin</h3>
+          <p>
+            Tulis pertanyaanmu (misal: cek stok, request kartu ucapan, atau tanya estimasi ongkir). Setelah klik kirim,
+            kamu akan diarahkan ke WhatsApp.
+          </p>
+
+          <form id="contactForm" style="margin-top:18px">
+            <div class="form-grid" style="margin-bottom:14px">
+              <div>
+                <label class="required" for="cName">Nama</label>
+                <input id="cName" class="field" placeholder="Nama kamu" required />
+              </div>
+              <div>
+                <label class="required" for="cWA">WhatsApp</label>
+                <input id="cWA" class="field" inputmode="tel" placeholder="08xxxxxxxxxx / +62xxxxxxxxxx" required />
+              </div>
+            </div>
+            <div>
+              <label class="required" for="cMsg">Pesan</label>
+              <textarea id="cMsg" class="field" placeholder="Tulis pesan kamu…" required></textarea>
+            </div>
+
+            <div class="form-actions" style="justify-content:flex-start">
+              <button type="reset" class="btn-reset">Reset</button>
+              <button type="submit" class="btn-primary btn-large">Kirim via WhatsApp</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2 class="brand-title">
+            <span class="logo-icon" aria-hidden="true">
+              <img class="logo-img" src="assets/logo.png" alt="" onerror="this.style.display='none'">
+              <span class="logo-letter">N</span>
+            </span>
+            <span class="brand-name">NGEKUE</span>
+          </h2>
+          <p>Kue lebaran premium homemade dengan bahan pilihan. Cocok untuk hampers &amp; keluarga.</p>
+          <div class="social-links">
+            <a class="social-btn" href="#" data-social="ig" title="Instagram" aria-label="Instagram">📸</a>
+            <a class="social-btn" href="#" data-social="wa" title="WhatsApp" aria-label="WhatsApp">💬</a>
+            <a class="social-btn" href="#" data-social="tiktok" title="TikTok" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="keunggulan.html">Keunggulan</a></li>
+            <li><a href="testimoni.html">Testimoni</a></li>
+            <li><a href="order.html">Pesan</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Order</h4>
+          <ul class="footer-links">
+            <li><a href="order.html">Order via Form</a></li>
+            <li><a href="kontak.html">WhatsApp Admin</a></li>
+            <li><a href="mailto:cs@ngekue.id">cs@ngekue.id</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Catatan</h4>
+          <ul class="footer-links">
+            <li><a href="order.html">Minimal H-2 pengiriman</a></li>
+            <li><a href="order.html">Stok terbatas saat peak</a></li>
+            <li><a href="order.html">Konfirmasi admin</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> NGEKUE — All rights reserved.</span>
+        <span style="color:var(--muted)">Kontak cepat via WhatsApp</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

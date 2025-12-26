@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NGEKUE — Form Pemesanan</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-wrap">
+      <a class="logo-nav" href="index.html" aria-label="NGEKUE Home" style="text-decoration:none;color:inherit">
+        <div class="logo-icon" aria-hidden="true">
+          <img class="logo-img" src="assets/logo.png" alt="" onerror="this.style.display='none'">
+          <span class="logo-letter">N</span>
+        </div>
+        NGEKUE
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="produk.html">Produk</a>
+        <a href="keunggulan.html">Keunggulan</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="kontak.html">Kontak</a>
+        <div class="cart-wrap">
+          <button class="cart-btn" id="cartBtn" type="button" aria-label="Keranjang">
+            <span class="cart-ico" aria-hidden="true">🛒</span><span class="cart-badge" id="cartBadge">0</span>
+          </button>
+          <div class="mini-cart" id="miniCart" aria-hidden="true"></div>
+        </div>
+        <a href="order.html" class="btn-primary">Pesan Sekarang</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="order-section" id="order">
+      <div class="order-container">
+        <div class="section-header" style="margin-bottom:28px">
+          <h2 class="section-title" style="margin-bottom:10px">Form Pemesanan</h2>
+          <p class="section-subtitle" style="font-size:16px">
+            Pilih varian, isi data, dan kami konfirmasi via WhatsApp.
+          </p>
+        </div>
+
+        <div id="formAlert" class="alert"></div>
+
+        <form id="orderForm" novalidate>
+          <div class="form-grid">
+            <div>
+              <label class="required" for="name">Nama Lengkap</label>
+              <input id="name" class="field" placeholder="Contoh: Fathir Fairuzzi" required />
+            </div>
+            <div>
+              <label class="required" for="wa">No. WhatsApp</label>
+              <input id="wa" class="field" inputmode="tel" placeholder="08xxxxxxxxxx / +62xxxxxxxxxx" required />
+              <div class="help-text">Pastikan nomor aktif untuk konfirmasi.</div>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div>
+              <label class="required" for="productSelect">Pilih Produk</label>
+              <select id="productSelect" class="field" required>
+                <option value="" disabled selected>Pilih varian…</option>
+                <option value="nastar" data-price="85000">Nastar Premium (500g) — Rp 85.000</option>
+                <option value="kastengel" data-price="90000">Kastengel Keju (500g) — Rp 90.000</option>
+                <option value="putri" data-price="80000">Putri Salju (500g) — Rp 80.000</option>
+                <option value="lidah" data-price="75000">Lidah Kucing (450g) — Rp 75.000</option>
+                <option value="kacang" data-price="70000">Kue Kacang (500g) — Rp 70.000</option>
+                <option value="sagu" data-price="78000">Sagu Keju (500g) — Rp 78.000</option>
+                <option value="semprit" data-price="76000">Semprit Butter (500g) — Rp 76.000</option>
+                <option value="coklat" data-price="79000">Choco Cookies (500g) — Rp 79.000</option>
+                <option value="almond" data-price="88000">Almond Cookies (500g) — Rp 88.000</option>
+                <option value="snowball" data-price="82000">Snowball (500g) — Rp 82.000</option>
+                <option value="palm" data-price="86000">Palm Cheese (500g) — Rp 86.000</option>
+                <option value="brownies" data-price="84000">Brownies Kering (450g) — Rp 84.000</option>
+                <option value="hampers" data-price="180000">Hampers Lebaran (mix) — Rp 180.000</option>
+              </select>
+              <div class="help-text">Tip: kamu bisa pilih produk dari halaman Produk lalu otomatis diarahkan ke sini.</div>
+            </div>
+
+            <div>
+              <label class="required" for="qty">Jumlah</label>
+              <input id="qty" class="field" type="number" min="1" value="1" required />
+            </div>
+          </div>
+
+          <div>
+            <label class="required" for="address">Alamat Lengkap</label>
+            <textarea id="address" class="field" placeholder="Jalan, RT/RW, kecamatan, kota, patokan" required></textarea>
+          </div>
+
+          <div class="form-grid">
+            <div>
+              <label class="required" for="shipDate">Tanggal Kirim / Ambil</label>
+              <input id="shipDate" class="field" type="date" required />
+            </div>
+
+            <div>
+              <label class="required" for="payment">Metode Pembayaran</label>
+              <select id="payment" class="field" required>
+                <option value="" disabled selected>Pilih metode…</option>
+                <option value="transfer">Transfer Bank</option>
+                <option value="qris">QRIS</option>
+                <option value="ewallet">E-Wallet (OVO/DANA/GoPay)</option>
+                <option value="cod">COD (tergantung area)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div>
+              <label for="delivery">Metode Pengiriman</label>
+              <select id="delivery" class="field">
+                <option value="instan" data-fee="15000">Kurir Instan — Rp 15.000</option>
+                <option value="regular" data-fee="10000">Kurir Reguler — Rp 10.000</option>
+                <option value="pickup" data-fee="0">Ambil di Toko — Rp 0</option>
+              </select>
+              <div class="help-text">Ongkir estimasi, admin akan konfirmasi ongkir final.</div>
+            </div>
+
+            <div>
+              <label for="notes">Catatan (opsional)</label>
+              <input id="notes" class="field" placeholder="Misal: kartu ucapan / request tanpa topping" />
+            </div>
+          </div>
+
+          <div class="summary-box" aria-live="polite">
+            <div class="summary-row"><span>Harga per item</span><strong id="priceText">—</strong></div>
+            <div class="summary-row"><span>Jumlah</span><strong id="qtyText">1</strong></div>
+            <div class="summary-row"><span>Ongkir (estimasi)</span><strong id="shipText">Rp 15.000</strong></div>
+            <div class="divider"></div>
+            <div class="summary-row summary-total"><span>Total (estimasi)</span><strong id="totalText">—</strong></div>
+          </div>
+
+          <div class="form-actions">
+            <button type="reset" class="btn-reset">Reset</button>
+            <button type="submit" class="btn-primary btn-large">Kirim Pesanan</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2 class="brand-title">
+            <span class="logo-icon" aria-hidden="true">
+              <img class="logo-img" src="assets/logo.png" alt="" onerror="this.style.display='none'">
+              <span class="logo-letter">N</span>
+            </span>
+            <span class="brand-name">NGEKUE</span>
+          </h2>
+          <p>Kue lebaran premium homemade dengan bahan pilihan. Cocok untuk hampers &amp; keluarga.</p>
+          <div class="social-links">
+            <a class="social-btn" href="#" data-social="ig" title="Instagram" aria-label="Instagram">📸</a>
+            <a class="social-btn" href="#" data-social="wa" title="WhatsApp" aria-label="WhatsApp">💬</a>
+            <a class="social-btn" href="#" data-social="tiktok" title="TikTok" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="keunggulan.html">Keunggulan</a></li>
+            <li><a href="testimoni.html">Testimoni</a></li>
+            <li><a href="order.html">Pesan</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Order</h4>
+          <ul class="footer-links">
+            <li><a href="order.html">Order via Form</a></li>
+            <li><a href="kontak.html">WhatsApp Admin</a></li>
+            <li><a href="mailto:cs@ngekue.id">cs@ngekue.id</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Catatan</h4>
+          <ul class="footer-links">
+            <li><a href="order.html">Minimal H-2 pengiriman</a></li>
+            <li><a href="order.html">Stok terbatas saat peak</a></li>
+            <li><a href="order.html">Konfirmasi admin</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> NGEKUE — All rights reserved.</span>
+        <span style="color:var(--muted)">Metode bayar: Transfer • QRIS • E-Wallet • COD</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
